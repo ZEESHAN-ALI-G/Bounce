@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Bounce</title>
+    <style>
+        body {
+            margin: 0;
+            /* Remove default margin */
+            overflow: hidden;
+            /* Hide vertical scrollbar */
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Set height to 100% of viewport height */
+        }
+
+        .ball {
+            width: 69px;
+            height: 69px;
+            border-radius: 69px;
+            background-color: hotpink;
+
+            position: absolute;
+            bottom: 0;
+            /* Position at the bottom of the container */
+            left: 20%;
+            animation: bounce 3s cubic-bezier(.01, .87, .7, .57) 2s infinite alternate-reverse;
+        }
+
+        .ball2 {
+            width: 80px;
+            height: 80px;
+            border-radius: 69px;
+            background-color: pink;
+            position: absolute;
+            background-image: url("cat2.jpg");
+            background-size: contain;
+            /* Position at the bottom of the container */
+            animation: bounce 5s ease-in 3s infinite alternate-reverse;
+            top: 52px;
+            /* Adjust the top position as needed */
+            left: 5%;
+        }
+
+        .ball3 {
+            width: 20px;
+            height: 20px;
+            border-radius: 69px;
+            background-color: #8B008B;
+            position: absolute;
+            /* top: 52px; */
+            /* Adjust the top position as needed */
+            left: 30%;
+            animation: bounce 2s cubic-bezier(1, 1.2, 0, 0.11) infinite alternate-reverse, color_change 5s infinite;
+        }
+
+        @keyframes bounce {
+
+            /* I would come back later 😵‍💫 */
+            0% {
+                transform: translate(0, 0);
+            }
+
+            14% {
+                transform: translate(150px, -30px);
+                background-color: rgb(165, 35, 100);
+            }
+
+            28% {
+                transform: translate(300px, 0px);
+                background-color: rgb(210, 188, 199);
+
+            }
+
+            42% {
+                transform: translate(450px, -30px);
+                background-color: rgb(165, 35, 156);
+            }
+
+            71% {
+                transform: translate(600px, 0px);
+                background-color: rgb(210, 188, 199);
+            }
+
+            86% {
+                transform: translate(750px, -30px);
+                background-color: rgb(141, 35, 165);
+            }
+
+            100% {
+                transform: translate(850px, 0px);
+                background-color: rgb(210, 188, 199);
+            }
+
+        }
+
+        @keyframes color_change {
+            25% {
+                background-color: palevioletred;
+            }
+
+            50% {
+                background-color: magenta;
+            }
+
+            75% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: dodgerblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+        <div class="ball2"></div>
+        <div class="ball3"></div>
+    </div>
+</body>
+
+</html>
